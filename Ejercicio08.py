@@ -14,3 +14,16 @@
 #revisar otros métodos de cadena en el siguiente link.
 #time = input(“hora”)
 #hours, minutes = time.split(":")
+time = input("Introduce la hora (formato de 24 hrs): ")
+hours, minutes = time.split(":")
+hours = int(hours)
+minutes = int(minutes)
+Hora_Numerico = hours + minutes / 60
+if 7 <= Hora_Numerico <= 8:
+    print("Es hora de desayunar.")
+elif 12 <= Hora_Numerico <= 13:
+    print("Es hora de almorzar.")
+elif 18 <= Hora_Numerico <= 19:
+    print("Es hora de cenar.")
+else:
+    print("No es hora de comer.")
