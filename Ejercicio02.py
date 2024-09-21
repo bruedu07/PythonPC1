@@ -5,3 +5,10 @@
 #porcentaje de propina desea dejar al mesero. Su programa debe devolver la cantidad de dinero a
 #dejar como propina.
 
+consumo = float(input("¿Cuál fue el total de tu consumo en el restaurante? "))
+porcentaje_propina = float(input("¿Qué porcentaje de propina deseas dejar? "))
+
+propina = consumo * (porcentaje_propina / 100)
+
+print(f"La cantidad de dinero a dejar como propina es: ${propina:.2f}")
+
