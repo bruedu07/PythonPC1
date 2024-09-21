@@ -25,3 +25,16 @@
 #- El empleo de diccionarios podría ayudar con esta tarea.
 #- El uso de métodos de cadena sería muy útil al momento de separar el nombre del archivo de
 #su extensión.
+mime_types = {
+    '.gif': 'image/gif',
+    '.jpg': 'image/jpeg',
+    '.jpeg': 'image/jpeg',
+    '.png': 'image/png',
+    '.pdf': 'application/pdf',
+    '.txt': 'text/plain',
+    '.zip': 'application/zip'
+}
+nombre_archivo = input("Introduce el nombre del archivo: ").strip()
+extension = '.' + nombre_archivo.split('.')[-1].lower() if '.' in nombre_archivo else ''
+tipo_mime = mime_types.get(extension, 'application/octet-stream')
+print(f"Tipo MIME: {tipo_mime}")
